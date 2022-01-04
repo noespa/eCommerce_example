@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel eCommerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -302,8 +303,93 @@
 
     </header>
 
+    {{-- Carousel --}}
+    <div class="container py-2 mx-auto">
+        <div id="carouselExampleCaptions" class="relative carousel slide" data-bs-ride="carousel">
+            <div class="absolute bottom-0 left-0 right-0 flex justify-center p-0 mb-4 carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="relative w-full overflow-hidden carousel-inner">
+                <div class="relative float-left w-full carousel-item active">
+                    <img src="images/main-slider-1-1.jpg" class="block w-full" alt="..." />
+                    <div class="absolute hidden text-left text-gray-600 carousel-caption md:block top-36 left-120">
+                        <div class="flex items-center animate__animated animate__bounceInRight">
+                            <h5 class="text-4xl uppercase ">Kid smart</h5><span
+                                class="pl-2 text-5xl font-bold text-gray-800 uppercase">Watches</span>
+                        </div>
+                        <p class="pt-1 animate__animated animate__bounceInLeft">Campra todos tus productos Smart por
+                            internet.</p>
+                        <div class="flex items-baseline pt-1 animate__animated animate__bounceInLeft">
+                            <span class="text-gray-400 ">Only price: </span><span
+                                class="pl-1 text-2xl font-bold text-red-500">$59.99</span>
+                        </div>
+                        <button
+                            class="px-5 py-2 mt-4 text-sm text-white bg-red-500 animate__animated animate__headShake">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div class="relative float-left w-full carousel-item">
+                    <img src="images/main-slider-1-2.jpg" class="block w-full" alt="..." />
+                    <div class="absolute hidden text-left text-gray-600 carousel-caption md:block top-24 left-20">
+                        <div class="animate__animated animate__bounceInRight">
+                            <div class="text-4xl font-bold text-red-500 uppercase">Extra</div>
+                            <span class="text-4xl font-bold text-red-500 uppercase">25% off</span>
+                            <span>On online payments</span>
+                        </div>
+                        <div class="animate__animated animate__fadeIn animate__slow  animate__delay font-extralight px-5 py-1 my-4 bg-neutral-800
+                            text-neutral-100 w-max tracking-wider">
+                            Use
+                            Code:
+                            #FA6868</div>
+                        <div class="uppercase text-neutral-700 text-3xl font-bold">Get free</div>
+                        <div class="uppercase text-xl">Transparent bra straps</div>
+
+                    </div>
+                </div>
+                <div class="relative float-left w-full carousel-item">
+                    <img src="images/main-slider-1-3.jpg" class="block w-full" alt="..." />
+                    <div class="absolute hidden text-left text-gray-600 top-24 carousel-caption md:block left-24">
+                        <div class="flex items-center animate__animated animate__bounceInRight">
+                            <h5 class="text-4xl uppercase">Great range of </h5><span
+                                class="pl-2 text-4xl font-bold text-gray-800 uppercase">exclusive</span>
+                        </div>
+                        <span class="text-4xl font-bold text-gray-800 uppercase">furniture packages</span>
+                        <p class="pt-1 animate__animated animate__fadeInLeft">Exclusive Furniture Packages to Suit every
+                            need.</p>
+                        <div class="flex items-baseline pt-1">
+                            <span class="text-gray-400">Starting at: </span><span
+                                class="pl-1 text-2xl font-bold text-red-500 animate__animated animate__bounce">$225.00</span>
+                        </div>
+                        <button class="px-5 py-2 mt-4 text-sm text-white bg-red-500">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="absolute top-0 bottom-0 left-0 flex items-center justify-center p-0 text-center border-0 carousel-control-prev hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
+                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="inline-block bg-no-repeat carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="absolute top-0 bottom-0 right-0 flex items-center justify-center p-0 text-center border-0 carousel-control-next hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
+                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="inline-block bg-no-repeat carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    {{-- Banner --}}
+    
+
 
     @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 
 </html>

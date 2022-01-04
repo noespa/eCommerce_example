@@ -16,6 +16,8 @@ module.exports = {
                 secondary: "#666666",
             },
             spacing: {
+                '120': '30rem',
+                '112': '28rem',
                 '45.5': '11.375rem',
                 '10.5': '3.75rem',
             },
