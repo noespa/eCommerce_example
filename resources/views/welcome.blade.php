@@ -12,9 +12,48 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     @livewireStyles
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .slide:hover>.slide-img {
+            --tw-scale-x: 1.05;
+            --tw-scale-y: 1.05;
+            transform: var(--tw-transform);
+        }
+
+        .slide:hover .quick-view {
+            right: 0;
+            opacity: 100;
+        }
+
+    </style>
 </head>
 
-<body>
+<body class="pb-40">
     {{-- mobile menu --}}
 
     {{-- header --}}
@@ -385,11 +424,201 @@
     </div>
 
     {{-- Banner --}}
-    
 
+    <div class="flex container mx-auto justify-between">
+        <img src="images/home-1-banner-1.jpg" class="hover:" alt="..." />
+        <img src="images/home-1-banner-2.jpg" class="" alt="..." />
+    </div>
+
+    {{-- On Sale --}}
+
+    <div class="container mx-auto pt-8">
+        <h3 class="uppercase bg-red-500 text-white px-5 py-2 text-sm font-semibold">On sale</h3>
+
+        {{-- Clock --}}
+        <div class="flex">
+
+            <div class="clock flex border w-max py-2 px-4 bg-neutral-50 items-center gap-3">
+                <svg class="w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="days font-semibold text-xl">00 <span class="text-sm font-normal text-gray-600">Days</span>
+                </div>
+                <div class="semicolon">:</div>
+                <div class="hours font-semibold text-xl">00 <span class="text-sm font-normal text-gray-600">Hrs</span>
+                </div>
+                <div class="semicolon">:</div>
+                <div class="mins font-semibold text-xl">00 <span class="text-sm font-normal text-gray-600">Mins</span>
+                </div>
+                <div class="semicolon">:</div>
+                <div class="secs font-semibold text-xl">00 <span class="text-sm font-normal text-gray-600">Mins</span>
+                </div>
+            </div>
+            <div class="flex-1 border-r"></div>
+        </div>
+
+        {{-- Sale items --}}
+        <div class="border border-t-0">
+            <!-- Slider main container -->
+            <div class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide ">
+                        <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                            hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                            <img src="images/products/tools_equipment_7.jpg" alt=""
+                                class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                            <div class="relative flex pb-8">
+                                <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                    duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                    Quick View</button>
+                            </div>
+                            <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                Wireless
+                                Omnidirectional Speaker
+                                [White]</a>
+                            <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                            <div class="sale absolute top-6 left-6 uppercase">
+                                <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                    <div class="">Sale</div>
+                                    <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                            hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                            <img src="images/products/digital_18.jpg" alt=""
+                                class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                            <div class="relative flex pb-8">
+                                <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                    duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                    Quick View</button>
+                            </div>
+                            <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                Wireless
+                                Omnidirectional Speaker
+                                [White]</a>
+                            <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                            <div class="sale absolute top-6 left-6 uppercase">
+                                <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                    <div class="">Sale</div>
+                                    <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                            hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                            <img src="images/products/fashion_08.jpg" alt=""
+                                class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                            <div class="relative flex pb-8">
+                                <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                    duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                    Quick View</button>
+                            </div>
+                            <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                Wireless
+                                Omnidirectional Speaker
+                                [White]</a>
+                            <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                            <div class="sale absolute top-6 left-6 uppercase">
+                                <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                    <div class="">Sale</div>
+                                    <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                            hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                            <img src="images/products/digital_17.jpg" alt=""
+                                class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                            <div class="relative flex pb-8">
+                                <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                    duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                    Quick View</button>
+                            </div>
+                            <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                Wireless
+                                Omnidirectional Speaker
+                                [White]</a>
+                            <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                            <div class="sale absolute top-6 left-6 uppercase">
+                                <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                    <div class="">Sale</div>
+                                    <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                            hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                            <img src="images/products/tools_equipment_3.jpg" alt=""
+                                class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                            <div class="relative flex pb-8">
+                                <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                    duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                    Quick View</button>
+                            </div>
+                            <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                Wireless
+                                Omnidirectional Speaker
+                                [White]</a>
+                            <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                            <div class="sale absolute top-6 left-6 uppercase">
+                                <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                    <div class="">Sale</div>
+                                    <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                {{-- <div class="swiper-pagination"></div> --}}
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                {{-- <div class="swiper-scrollbar"></div> --}}
+            </div>
+        </div>
+
+    </div>
 
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script>
+        window.onload = function () {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 5,
+                // spaceBetween: 30,
+                slidesPerGroup: 1,
+                loop: true,
+                // autoplay: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        };
+
+    </script>
 </body>
 
 </html>
