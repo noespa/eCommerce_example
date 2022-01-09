@@ -50,6 +50,87 @@
             opacity: 100;
         }
 
+        /* Rectangle Out */
+        .hvr-rectangle-out {
+            display: inline-block;
+            vertical-align: middle;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            background: #e1e1e1;
+            transition-property: color;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-rectangle-out:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #7c7c7c;
+            transform: scale(0);
+            transition-property: transform;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            opacity: 0.2;
+        }
+
+        .hvr-rectangle-out:hover,
+        .hvr-rectangle-out:focus,
+        .hvr-rectangle-out:active {
+            color: white;
+        }
+
+        .hvr-rectangle-out:hover:before,
+        .hvr-rectangle-out:focus:before,
+        .hvr-rectangle-out:active:before {
+            transform: scale(1);
+        }
+
+        /* Shutter In Horizontal */
+        .hvr-shutter-in-horizontal {
+            display: inline-block;
+            vertical-align: middle;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            background: #2098D1;
+            transition-property: color;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-shutter-in-horizontal:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #e1e1e1;
+            transform: scaleX(1);
+            transform-origin: 50%;
+            transition-property: transform;
+            transition-duration: 0.6s;
+            transition-timing-function: ease-out;
+            opacity: 0.2;
+        }
+
+        .hvr-shutter-in-horizontal:hover,
+        .hvr-shutter-in-horizontal:focus,
+        .hvr-shutter-in-horizontal:active {
+            color: white;
+        }
+
+        .hvr-shutter-in-horizontal:hover:before,
+        .hvr-shutter-in-horizontal:focus:before,
+        .hvr-shutter-in-horizontal:active:before {
+            transform: scaleX(0);
+        }
+
     </style>
 </head>
 
@@ -426,8 +507,10 @@
     {{-- Banner --}}
 
     <div class="flex container mx-auto justify-between">
-        <img src="images/home-1-banner-1.jpg" class="hover:" alt="..." />
-        <img src="images/home-1-banner-2.jpg" class="" alt="..." />
+        <div style="background-image: url('images/home-1-banner-1.jpg')" class="w-[580px] h-[190px] hvr-rectangle-out">
+        </div>
+        <div style="background-image: url('images/home-1-banner-2.jpg')" class="w-[580px] h-[190px] hvr-rectangle-out">
+        </div>
     </div>
 
     {{-- On Sale --}}
@@ -594,7 +677,349 @@
             </div>
         </div>
 
+
     </div>
+
+    {{-- Latest products --}}
+    <div class="container mx-auto pt-8">
+        <h3 class="uppercase bg-red-500 text-white px-5 py-2 text-sm font-semibold">Latest products</h3>
+        <div style="background-image: url('images/digital-electronic-banner.jpg')"
+            class="w-[1170px] h-[240px] hvr-shutter-in-horizontal">
+        </div>
+
+        {{-- Latest products carousel --}}
+
+        <div class="pt-2">
+            <div class="border">
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/tools_equipment_7.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/digital_18.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/fashion_08.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/digital_17.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/tools_equipment_3.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    {{-- <div class="swiper-pagination"></div> --}}
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- If we need scrollbar -->
+                    {{-- <div class="swiper-scrollbar"></div> --}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{-- Product categories --}}
+    <div class="container mx-auto pt-8">
+        <h3 class="uppercase bg-red-500 text-white px-5 py-2 text-sm font-semibold">Product categories</h3>
+        <div style="background-image: url('images/fashion-accesories-banner.jpg')"
+            class="w-[1170px] h-[240px] hvr-shutter-in-horizontal">
+        </div>
+
+        {{-- Products categories carousel --}}
+
+        <div class="pt-2">
+            <div class="border">
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/tools_equipment_7.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/digital_18.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/fashion_08.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/digital_17.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="slide flex items-end relative py-6 flex-col border border-transparent hover:border
+                                hover:border-red-500 px-2 transition-all duration-1000 ease-in-out overflow-hidden">
+                                <img src="images/products/tools_equipment_3.jpg" alt=""
+                                    class="slide-img transition-all duration-500 ease-in-out transform z-10">
+                                <div class="relative flex pb-8">
+                                    <button class="quick-view absolute w-max bg-black text-white text-xs px-2 py-1 z-20 transition-all
+                                        duration-500 ease-in-out transform -right-20 opacity-0 hover:bg-red-500">
+                                        Quick View</button>
+                                </div>
+                                <a href="#" class="text-[13px] text-left z-20 hover:text-red-500">Radiant-360 R6
+                                    Wireless
+                                    Omnidirectional Speaker
+                                    [White]</a>
+                                <div class="price text-sm font-semibold pt-2 text-left">$250.00</div>
+                                <div class="sale absolute top-6 left-6 uppercase">
+                                    <div class="relative sale px-2 text-white bg-red-500 text-[10px] z-20">
+                                        <div class="">Sale</div>
+                                        <div class="absolute -bottom-1.5 left-1 right-arrow-sale"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    {{-- <div class="swiper-pagination"></div> --}}
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- If we need scrollbar -->
+                    {{-- <div class="swiper-scrollbar"></div> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{-- Red line --}}
+    <div class="h-32 bg-red-500">
+        <div class="container flex mx-auto items-center justify-around h-full text-white">
+            <div class="flex items-center gap-4">
+                <svg class="h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                </svg>
+                <div class="flex flex-col">
+                    <h4 class="uppercase text-sm font-bold">Free shipping</h4>
+                    <p class="text-sm font-extralight">Free On Oder Over $99</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <svg class="h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <div class="flex flex-col">
+                    <h4 class="uppercase text-sm font-bold">Guarantee</h4>
+                    <p class="text-sm font-extralight">30 Days Money Back</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <svg class="h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                <div class="flex flex-col">
+                    <h4 class="uppercase text-sm font-bold">Safe payment</h4>
+                    <p class="text-sm font-extralight">Safe your online payment
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <svg class="h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <div class="flex flex-col">
+                    <h4 class="uppercase text-sm font-bold">Online support</h4>
+                    <p class="text-sm font-extralight">We Have Support 24/7
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
