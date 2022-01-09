@@ -134,7 +134,7 @@
     </style>
 </head>
 
-<body class="pb-40">
+<body>
     {{-- mobile menu --}}
 
     {{-- header --}}
@@ -1019,6 +1019,173 @@
         </div>
     </div>
 
+    {{-- Contact details --}}
+
+    <div class="flex flex-row container mx-auto pt-8 gap-20">
+        <div class="basis-1/3">
+            <h4 class="uppercase text-sm font-bold pb-4">Contact details</h4>
+            <div class="flex flex-col gap-5 text-[13px] content-start text-neutral-600">
+                <div class="flex content-start">
+                    <div class="w-10">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <p class="leading-loose">45 Grand Central Terminal New York,NY 1017 United State USA</p>
+                </div>
+                <div class="flex">
+                    <div class="w-10">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <p>(+123) 456 789 - (+123) 666 888</p>
+                </div>
+                <div class="flex">
+                    <div class="w-10">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <a href="mailto:Contact@yourcompany.com">Contact@yourcompany.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="basis-1/3">
+            <h4 class="uppercase text-sm font-bold pb-4">Hot line</h4>
+            <p class="text-[13px] text-neutral-600">Call Us toll Free</p>
+            <span class="text-xl font-bold text-red-500">(+123) 456 789 - (+123) 666 888</span>
+
+            <h4 class="uppercase text-sm font-bold pb-4 pt-8">Sign up for newsletter</h4>
+            <div class="flex items-center h-10">
+                <input type="email" name="email" placeholder="Enter your email address"
+                    class="pl-4 py-2 text-[13px] focus:outline-none ring-neutral-200 ring-1 flex-1 w-48">
+                <div class="flex items-center h-full px-5 text-white bg-red-500 border text-sm font-semibold">
+                    Subscribe
+                </div>
+            </div>
+        </div>
+        <div class="basis-1/3">
+            <div class="flex flex-row">
+                <div class="basis-1/2">
+                    <h4 class="uppercase text-sm font-bold pb-4">My account</h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-neutral-600">
+                        <li>My Account</li>
+                        <li>Brands</li>
+                        <li>Gift Certificates</li>
+                        <li>Affiliates</li>
+                        <li>Wish list</li>
+                    </ul>
+                </div>
+                <div class="basis-1/2">
+                    <h4 class="uppercase text-sm font-bold pb-4">Information</h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-neutral-600">
+                        <li>Contact Us</li>
+                        <li>Returns</li>
+                        <li>Site Map</li>
+                        <li>Specials</li>
+                        <li>Order History</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-row container mx-auto pt-12 gap-20">
+        <div class="basis-1/3">
+            <h4 class="uppercase text-sm font-bold pb-4">We using safe payments:</h4>
+            <img src="images/payment.png" style="max-width: 260px;">
+        </div>
+        <div class="basis-1/3">
+            <h4 class="uppercase text-sm font-bold pb-4">Social network</h4>
+            <div class="flex flex-row items-center gap-3">
+                <div class="flex">
+                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500
+                        hover:bg-red-500 hover:text-white transition ease-in-out duration-300">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex">
+                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500
+                        hover:bg-red-500 hover:text-white transition ease-in-out duration-300">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
+                        </svg>
+
+                    </a>
+                </div>
+                <div class="flex">
+                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500
+                        hover:bg-red-500 hover:text-white transition ease-in-out duration-300">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex">
+                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500
+                        hover:bg-red-500 hover:text-white transition ease-in-out duration-300">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex">
+                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center text-neutral-500
+                        hover:bg-red-500 hover:text-white transition ease-in-out duration-300">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.8679 3.434-5.7568 6.7619-5.6368 2.4729.06 3.6279 1.664 3.4929 4.7969z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="basis-1/3">
+            <h4 class="uppercase text-sm font-bold pb-4">Download App</h4>
+            <div class="flex items-center gap-5">
+                <a href="#"><img src="images/brands/apple-store.png" alt="apple store" width="128" height="36"></a>
+                <a href="#"><img src="images/brands/google-play-store.png" alt="google play store" width="128"
+                        height="36"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full py-8">
+        <div class="border-t"></div>
+    </div>
+
+    <div class="container mx-auto">
+        <h4 class="uppercase text-sm font-bold pb-4">Quick links</h4>
+    </div>
+
+    <div class="w-full bg-neutral-800 text-[13px]">
+        <div class="container flex text-neutral-400 mx-auto py-3 items-center justify-between">
+            <div class="">Copyright © 2020 Surfside Media. All rights reserved</div>
+            <div class="">
+                <ul class="flex gap-5">
+                    <li><a href="#" class="hover:text-red-500 border-r border-neutral-600 pr-5">About Us</a></li>
+                    <li><a href="#" class="hover:text-red-500 border-r border-neutral-600 pr-5">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-red-500 border-r border-neutral-600 pr-5">Terms & Conditions</a>
+                    </li>
+                    <li><a href="#" class="hover:text-red-500">Return Policy</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
     @livewireScripts
